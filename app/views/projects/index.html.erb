@@ -2,7 +2,7 @@
 <ul>
   <% @projects.each do |i| %>
     <% if i.description != nil %>
-      <li><%= i.name + ": " + i.description %></li>
+      <li><%= i.name + ": "+ i.description %></li>
     <% else %>
       <li><%= i.name%></li>
     <%end%>
