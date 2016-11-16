@@ -1,10 +1,17 @@
 <h1>Projects</h1>
+
+<hr>
+
 <ul>
   <% @projects.each do |i| %>
     <% if i.description != nil %>
-      <li><%= i.name + ": "+ i.description %></li>
+      <li><%= link_to (i.name + ": "+ i.description), {action: 'show',id: i.id} %></li>
     <% else %>
-      <li><%= i.name%></li>
+      <li><%= link_to i.name, {action: 'show',id: i.id} %></li>
     <%end%>
   <%end%>
 </ul>
+
+</hr>
+
+<%= link_to 'Add', '/new' %>
