@@ -8,5 +8,5 @@
 
 </hr>
 <%= link_to 'Index', '/project' %>
-<%= link_to "Delete", {action: 'delete',id: @project.id} %>
+<%= link_to "Delete", {action: 'delete',id: @project.id} , method: :get , data: { confirm: "Are you sure you want to delete #{@project.name}?"}  %>
 <%= link_to 'Entry', "/project/#{@project.id}/time_entries" %>
