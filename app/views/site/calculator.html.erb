@@ -1,8 +1,19 @@
+<h1>Calculator</h1>
+
+<hr>
+
 <form action="/calculate" method="POST">
   <input type="text" name="first_num" placeholder="First Number">
+  <br>
+  +
+  <br>
   <input type="text" name="second_num" placeholder="Second Number">
+  <br>
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <br>
   <button type="submit">Add</button>
 </form>
 
-<a href="/"><img src="home.png" height=20px width=20px/></a>
+<hr>
+
+<a href="/">Home</a>
