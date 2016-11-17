@@ -9,7 +9,8 @@
 
   <br>
 
-  <%= link_to 'Edit', "/project/#{@project.id}/time_entries/#{entry.id}/edit" %>
+  <%= link_to 'Edit', {action: 'edit', project_id: @project.id, id: entry.id} %>
+  <%= link_to 'Delete', {action: 'delete', project_id: @project.id, id: entry.id} %>
   </li>
   <%end%>
 </ul>

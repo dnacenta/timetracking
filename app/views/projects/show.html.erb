@@ -8,4 +8,5 @@
 
 </hr>
 <%= link_to 'Index', '/project' %>
-<%= link_to 'TimeEntry', "/project/#{@project.id}/time_entries" %>
+<%= link_to "Delete", {action: 'delete',id: @project.id} %>
+<%= link_to 'Entry', "/project/#{@project.id}/time_entries" %>

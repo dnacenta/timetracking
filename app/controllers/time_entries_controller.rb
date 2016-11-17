@@ -41,4 +41,17 @@ class TimeEntriesController < ApplicationController
       render "edit"
     end
   end
+
+  def delete
+    @project = Project.find params[:project_id]
+    @entry = @project.time_entries.find(params[:id]).destroy
+
+    redirect_to action: 'index'
+  end
+
+  private
+
+  def entry_params
+    params.require(:time_entry).permit(:hours, :minutes)
+  end
 end

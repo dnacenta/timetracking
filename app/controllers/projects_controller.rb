@@ -21,4 +21,9 @@ class ProjectsController < ApplicationController
       render "no_projects_found"
     end
   end
+
+  def delete
+    @project = Project.find(params[:id]).destroy
+    redirect_to action: 'index'
+  end
 end
