@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/project/:id', to: 'projects#show'
   get '/new', to: 'projects#new'
   get '/project/:id/delete', to: 'projects#delete'
+  get '/delete_all', to: 'projects#delete_all'
 
   post '/new', to: 'projects#create'
 

@@ -1,17 +1,3 @@
 <h1>Add Time Entry</h1>
 
-<%= form_for [@project, @entry] do |f| %>
-
-  <%= f.label :hours %>
-  <%= f.text_field :hours, required: true %>
-
-  <br>
-
-  <%= f.label :minutes %>
-  <%= f.text_field :minutes, required: true %>
-
-  <br>
-
-  <%= f.button %>
-
-<% end %>
+<%= render "form" %>

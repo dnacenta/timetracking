@@ -26,4 +26,9 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id]).destroy
     redirect_to action: 'index'
   end
+
+  def delete_all
+    Project.destroy_all
+    redirect_to action: 'index'
+  end
 end
