@@ -10,7 +10,7 @@
   <br>
 
   <%= link_to 'Edit', {action: 'edit', project_id: @project.id, id: entry.id} %>
-  <%= link_to 'Delete', {action: 'delete', project_id: @project.id, id: entry.id}, method: :get , data: { confirm: "Are you sure you want to delete #{@project.name}"} %>
+  <%= link_to 'Delete', {action: 'delete', project_id: @project.id, id: entry.id}, method: :get , data: { confirm: "Are you sure you want to delete this entry?"} %>
   </li>
   <%end%>
 </ul>
