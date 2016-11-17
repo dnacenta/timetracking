@@ -6,6 +6,12 @@
   <%= entry.hours %> h
   <%= entry.minutes %> m-
   <%= entry.updated_at %>
+
+  <br>
+
+  <%= link_to 'Edit', "/project/#{@project.id}/time_entries/#{entry.id}/edit" %>
   </li>
   <%end%>
 </ul>
+<%= link_to 'Index', "/project" %>
+<%= link_to 'Add', "/project/#{@project.id}/time_entries/new" %>

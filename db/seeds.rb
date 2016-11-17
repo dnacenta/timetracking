@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'date'
+
 (1..10).each do |i|
   p= Project.create!(name: "Ironhack #{i}", description: "Description #{i}")
-  p.time_entries.create!(hours: i, minutes: i*rand(5..7), date: Date.today)
+  p.time_entries.create!(hours: i, minutes: i*rand(5..7))
 end

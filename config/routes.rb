@@ -14,4 +14,9 @@ Rails.application.routes.draw do
   post '/new', to: 'projects#create'
 
   get '/project/:project_id/time_entries', to: 'time_entries#index'
+  get '/project/:project_id/time_entries/new', to: 'time_entries#new'
+  get '/project/:project_id/time_entries/:id/edit', to: 'time_entries#edit'
+
+  post '/project/:project_id/time_entries', to: 'time_entries#create', as: :project_time_entries
+  patch '/project/:project_id/time_entries/:id', to: 'time_entries#update', as: :project_time_entry
 end

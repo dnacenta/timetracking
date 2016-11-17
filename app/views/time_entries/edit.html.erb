@@ -1,0 +1,19 @@
+<h1>Edit Time Entry</h1>
+
+<%= form_for [@project, @entry] do |f| %>
+
+  <%= f.label :hours %>
+  <%= f.text_field :hours %>
+
+  <br>
+
+  <%= f.label :minutes %>
+  <%= f.text_field :minutes %>
+
+  <br>
+
+  <%= f.button %>
+
+  <%= link_to 'Cancel', "/project/#{@project.id}/time_entries" %>
+
+<% end %>
